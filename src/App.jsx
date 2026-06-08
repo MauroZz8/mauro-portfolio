@@ -35,7 +35,7 @@ function App() {
             
             {/* Pulsante Hire Me in risalto */}
             <a 
-              href="mailto:tuamail@esempio.com" // Metti la tua vera mail qui
+              href="mailto:mauro.garofalo89@gmail.com" // Metti la tua vera mail qui
               className="bg-indigo-600/10 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600 hover:text-white px-4 py-1.5 rounded-full transition-all text-xs font-semibold tracking-wide"
             >
               Hire me
@@ -58,7 +58,7 @@ function App() {
         <div className="flex flex-wrap gap-4 justify-center md:justify-start items-center">
           {/* Pulsante LinkedIn */}
           <a 
-            href="https://linkedin.com/in/il-tuo-profilo" // Incolla il link del tuo vero LinkedIn
+            href="https://www.linkedin.com/in/mauro-garofalo-43b682105/" // Incolla il link del tuo vero LinkedIn
             target="_blank" 
             rel="noopener noreferrer" 
             className="bg-slate-900 border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900/80 text-white font-medium py-2.5 px-5 rounded-xl text-sm transition-all flex items-center gap-2"
