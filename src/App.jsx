@@ -20,23 +20,23 @@ function App() {
   return (
     <div id="home" className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
       
-      {/* NAVBAR (Stile Muneeb) */}
+      {/* NAVBAR  */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900/50">
         <div className="p-6 max-w-5xl mx-auto flex justify-between items-center">
           <a href="#home" className="text-xl font-bold tracking-wider text-indigo-400 hover:text-indigo-300 transition-colors">
             MAURO.DEV
           </a>
           
-          {/* I tuoi nuovi pulsanti di navigazione */}
+          {/* pulsanti di navigazione */}
           <div className="flex items-center space-x-6 text-sm font-medium text-slate-400">
             <a href="#home" className="hover:text-indigo-400 transition-colors">Home</a>
             <a href="#progetti" className="hover:text-indigo-400 transition-colors">Portfolio</a>
             <a href="#contatti" className="hover:text-indigo-400 transition-colors">Contact</a>
             
-            {/* Pulsante Hire Me in risalto */}
+            {/* Pulsante Hire Me */}
             <a 
-              href="mailto:mauro.garofalo89@gmail.com" // Metti la tua vera mail qui
-              className="bg-indigo-600/10 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600 hover:text-white px-4 py-1.5 rounded-full transition-all text-xs font-semibold tracking-wide"
+              href="mailto:mauro.garofalo89@gmail.com" 
+              className="white-600/10 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600 hover:text-white px-4 py-1.5 rounded-full transition-all text-xs font-semibold tracking-wide"
             >
               Hire me
             </a>
