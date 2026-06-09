@@ -1,10 +1,10 @@
 import React from 'react';
 import ProjectCard from './components/ProjectCard.jsx';
 
-// Importiamo le immagini con i nomi esatti che hai dato ai file
-import imgSicilimpianti from './assets/sicilimpianti.jpg';
-import imgFisioRocca from './assets/fisioterapiarocca.jpg';
-import imgIdria from './assets/idriabnb.jpg';
+// Import definitivi e corretti con estensione .png
+import imgSicilimpianti from './assets/sicilimpianti.png';
+import imgFisioRocca from './assets/fisioterapiarocca.png';
+import imgIdria from './assets/idriabnb.png';
 
 function App() {
   const projectsData = [
