@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from './components/ProjectCard.jsx';
 
-// Import delle immagini (PNG come abbiamo verificato)
+// Import delle immagini (PNG)
 import imgSicilimpianti from './assets/sicilimpianti.png';
 import imgFisioRocca from './assets/fisioterapiarocca.png';
 import imgIdria from './assets/idriabnb.png';
@@ -44,10 +44,8 @@ function App() {
           <div className="flex items-center space-x-6 text-sm font-medium text-slate-400">
             <a href="#home" className="hover:text-indigo-400 transition-colors">Home</a>
             <a href="#progetti" className="hover:text-indigo-400 transition-colors">Portfolio</a>
-            {/* Nuovo pulsante Contact */}
             <a href="#contatti" className="hover:text-indigo-400 transition-colors">Contact</a>
             
-            {/* Hire me ora punta alla sezione contatti */}
             <a 
               href="#contatti"
               className="bg-white text-black hover:bg-slate-200 px-4 py-1.5 rounded-full transition-all text-xs font-bold tracking-wide"
@@ -70,7 +68,7 @@ function App() {
 
         <div className="flex flex-col space-y-4 items-center md:items-start">
           <a 
-            href="https://linkedin.com/in/mauro-garofalo" // Inserisci il tuo link LinkedIn reale
+            href="https://linkedin.com/in/mauro-garofalo"
             target="_blank" 
             rel="noopener noreferrer" 
             className="bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900 text-white font-medium py-2.5 px-5 rounded-xl text-sm transition-all flex items-center gap-2 w-fit"
@@ -100,17 +98,17 @@ function App() {
         </div>
       </main>
 
-      {/* NUOVA SEZIONE CONTATTI (Stile Muneeb) */}
+      {/* SEZIONE CONTATTI - STILE MUNEEB */}
       <section id="contatti" className="max-w-5xl mx-auto px-4 py-24 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           
-          {/* Colonna Sinistra: Testo e Info */}
+          {/* Sinistra: Testo e Info */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               It's Time To Talk About Your <span className="text-indigo-400">Project</span>.
             </h2>
             <p className="text-slate-400 mb-12">
-              Let's make Long term and Co operative Relation
+              Lets make Long term and Co operative Relation
             </p>
             
             <div className="space-y-8">
@@ -120,7 +118,7 @@ function App() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Phone</p>
-                  <p className="text-white font-medium">+39 3XX XXXXXXX</p> {/* Metti il tuo numero qui */}
+                  <p className="text-white font-medium">+39 3XX XXXXXXX</p>
                 </div>
               </div>
 
@@ -130,16 +128,14 @@ function App() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Email</p>
-                  <a href="mailto:mauro.garofalo89@gmail.com" className="text-white font-medium hover:text-indigo-400 transition-colors">
-                    mauro.garofalo89@gmail.com
-                  </a>
+                  <p className="text-white font-medium">mauro.garofalo89@gmail.com</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Colonna Destra: Form */}
-          <div className="bg-slate-900/20 border border-slate-900 p-8 rounded-3xl">
+          {/* Destra: Form */}
+          <div className="bg-slate-900/10 border border-slate-900 p-8 rounded-3xl">
             <form className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -163,12 +159,12 @@ function App() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Message</label>
+                <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Comment or Message</label>
                 <textarea rows="4" className="w-full bg-black border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-indigo-500 outline-none transition-all resize-none"></textarea>
               </div>
 
-              <button type="button" className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-indigo-600/20">
-                Send Message
+              <button type="button" className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl transition-all">
+                Submit
               </button>
             </form>
           </div>
@@ -176,7 +172,7 @@ function App() {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-16 text-center text-slate-600 text-sm border-t border-slate-900 mt-20 bg-black">
+      <footer className="py-16 text-center text-slate-600 text-sm border-t border-slate-900 mt-20">
         <p>© 2026 Mauro Garofalo. Sviluppato con React & Tailwind CSS v4.</p>
       </footer>
 
@@ -185,14 +181,3 @@ function App() {
 }
 
 export default App;
-
-### Note tecniche per far funzionare tutto:
-1. **`scroll-smooth`**: Ho aggiunto questa classe al `div` principale. Serve a far sì che quando clicchi su "Contact" o "Hire me", la pagina scivoli dolcemente verso il basso invece di fare uno scatto brusco.
-2. **`scroll-mt-24`**: Aggiunto alla sezione `#contatti`. Impedisce alla Navbar fissa di coprire il titolo quando arrivi alla sezione.
-3. **Font Awesome**: Assicurati di avere il link a Font Awesome nel tuo file `index.html` (quello nella cartella principale del progetto) per far vedere le icone del telefono e della busta. Se non le vedi, aggiungi questa riga nel `<head>` di `index.html`:
-   ```html
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   
-Salva tutto, fai il push e goditi il tuo portfolio completo di sezione contatti interattiva! Fammi sapere se ti piace il risultato.
-
-Il tuo mazzo di slide sulla strategia per la sezione contatti è pronto! Dai un'occhiata per vedere come abbiamo strutturato il design per massimizzare le conversioni.
