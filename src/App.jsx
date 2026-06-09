@@ -1,24 +1,38 @@
 import React from 'react';
 import ProjectCard from './components/ProjectCard.jsx';
 
+// Importiamo le immagini reali dalla cartella assets
+import imgSicilimpianti from './assets/sicilimpianti.jpg';
+import imgFisioRocca from './assets/fisioterapiarocca.jpg';
+import imgIdria from './assets/idriabnb.jpg';
+
 function App() {
+  // Array aggiornato con i tuoi veri progetti WordPress
   const projectsData = [
     {
-      title: "Progetto JavaScript Avanzato",
-      description: "Applicazione web sviluppata focalizzandosi sulla manipolazione del DOM e performance.",
-      tags: ["JavaScript", "HTML5", "CSS3"],
-      link: "https://github.com/MauroZz8"
+      title: "Luminarie Sicil Impianti",
+      description: "Sito web aziendale sviluppato in ottica local marketing per un'azienda leader nel settore delle installazioni e luminarie artistiche.",
+      tags: ["WordPress", "Web Design", "SEO Local"],
+      image: imgSicilimpianti,
+      link: "https://sicilimpianti.it" // Se hai il link reale del sito inseriscilo qui, es: "https://sicilimpianti.it"
     },
     {
-      title: "React Web App",
-      description: "Interfaccia dinamica e performante con architettura a componenti e gestione dei dati.",
-      tags: ["React", "Vite", "JavaScript"],
-      link: "https://github.com/MauroZz8"
+      title: "FisioRocca - Fisioterapia",
+      description: "Piattaforma web professionale per uno studio di fisioterapia, incentrata sulla presentazione dei servizi specialistici e del team.",
+      tags: ["WordPress", "UI/UX", "Responsive"],
+      image: imgFisioRocca,
+      link: "www.fisioterapiarocca.it"
+    },
+    {
+      title: "Idria Bed and Breakfast",
+      description: "Sito web per una struttura ricettiva turistica vicino Milazzo, ottimizzato per la conversione e la presentazione delle camere.",
+      tags: ["WordPress", "Booking", "Turismo"],
+      image: imgIdria,
+      link: "#"
     }
   ];
 
   return (
-    // Sfondo impostato su bg-black (Nero assoluto)
     <div id="home" className="min-h-screen bg-black text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
       
       {/* NAVBAR */}
@@ -32,7 +46,6 @@ function App() {
             <a href="#home" className="hover:text-indigo-400 transition-colors">Home</a>
             <a href="#progetti" className="hover:text-indigo-400 transition-colors">Portfolio</a>
             
-            {/* Pulsante Hire Me in Bianco Pieno */}
             <a 
               href="mailto:mauro.garofalo89@gmail.com"
               className="bg-white text-black hover:bg-slate-200 px-4 py-1.5 rounded-full transition-all text-xs font-bold tracking-wide"
@@ -48,16 +61,15 @@ function App() {
         <h1 className="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
           Ciao, sono <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Mauro</span>
         </h1>
-        <p className="text-xl text-indigo-300 font-medium mb-4">Frontend / React Developer</p>
+        <p className="text-xl text-indigo-300 font-medium mb-4">Frontend / Web Developer</p>
         <p className="text-slate-400 text-lg max-w-xl mb-8 leading-relaxed">
-          Costruisco interfacce web moderne, reattive e pulite. Dai uno sguardo ai miei progetti open-source qui sotto.
+          Sviluppo soluzioni web moderne ed efficaci. Dai sistemi di gestione contenuti con WordPress fino ad interfacce dinamiche in React.
         </p>
 
         {/* Struttura Contatti sotto la descrizione */}
         <div className="flex flex-col space-y-4 items-center md:items-start">
-          {/* Pulsante LinkedIn */}
           <a 
-            href="https://linkedin.com/in/il-tuo-profilo" // Ricordati di metterci il tuo link reale!
+            href="https://linkedin.com/in/il-tuo-profilo"
             target="_blank" 
             rel="noopener noreferrer" 
             className="bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900 text-white font-medium py-2.5 px-5 rounded-xl text-sm transition-all flex items-center gap-2 w-fit"
@@ -68,7 +80,6 @@ function App() {
             LinkedIn
           </a>
 
-          {/* Testo Mail direttamente sotto */}
           <div className="flex items-center gap-2 text-slate-400 text-sm pl-1 pt-1">
             <svg className="w-4 h-4 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -83,9 +94,10 @@ function App() {
 
       {/* SEZIONE PROGETTI */}
       <main id="progetti" className="max-w-5xl mx-auto px-4 py-16 scroll-mt-24">
-        <h2 className="text-3xl font-bold text-white mb-8 border-b border-slate-900 pb-4">Progetti in evidenza</h2>
+        <h2 className="text-3xl font-bold text-white mb-8 border-b border-slate-900 pb-4">Progetti Realizzati</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Griglia che passa a 3 colonne sui desktop per far spazio a tutti e tre i siti */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projectsData.map((project, index) => (
             <ProjectCard 
               key={index}
@@ -93,6 +105,7 @@ function App() {
               description={project.description}
               tags={project.tags}
               link={project.link}
+              image={project.image} // Passiamo la nuova proprietà immagine
             />
           ))}
         </div>
