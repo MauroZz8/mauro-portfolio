@@ -98,7 +98,7 @@ function App() {
         </div>
       </main>
 
-      {/* SEZIONE CONTATTI - STILE MUNEEB */}
+      {/* SEZIONE CONTATTI */}
       <section id="contatti" className="max-w-5xl mx-auto px-4 py-24 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           
@@ -108,7 +108,7 @@ function App() {
               It's Time To Talk About Your <span className="text-indigo-400">Project</span>.
             </h2>
             <p className="text-slate-400 mb-12">
-              Lets make Long term and Co operative Relation
+              Chiedimi di Sviluppare un tuo Progetto
             </p>
             
             <div className="space-y-8">
@@ -117,8 +117,7 @@ function App() {
                   <i className="fa-solid fa-phone text-xl"></i>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Phone</p>
-                  <p className="text-white font-medium">+39 3XX XXXXXXX</p>
+              
                 </div>
               </div>
 
