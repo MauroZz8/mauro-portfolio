@@ -105,10 +105,10 @@ function App() {
           {/* Sinistra: Testo e Info */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              It's Time To Talk About Your <span className="text-indigo-400">Project</span>.
+              Parliamo del tuo <span className="text-indigo-400">Progetto</span>.
             </h2>
             <p className="text-slate-400 mb-12">
-              Chiedimi di Sviluppare un tuo Progetto
+              Chiedimi di Svilupparlo
             </p>
             
             <div className="space-y-8">
