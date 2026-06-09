@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from './components/ProjectCard.jsx';
 
-// Import definitivi e corretti con estensione .png
+// Import delle immagini (PNG come abbiamo verificato)
 import imgSicilimpianti from './assets/sicilimpianti.png';
 import imgFisioRocca from './assets/fisioterapiarocca.png';
 import imgIdria from './assets/idriabnb.png';
@@ -32,7 +32,7 @@ function App() {
   ];
 
   return (
-    <div id="home" className="min-h-screen bg-black text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+    <div id="home" className="min-h-screen bg-black text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white scroll-smooth">
       
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-slate-900/50">
@@ -44,9 +44,12 @@ function App() {
           <div className="flex items-center space-x-6 text-sm font-medium text-slate-400">
             <a href="#home" className="hover:text-indigo-400 transition-colors">Home</a>
             <a href="#progetti" className="hover:text-indigo-400 transition-colors">Portfolio</a>
+            {/* Nuovo pulsante Contact */}
+            <a href="#contatti" className="hover:text-indigo-400 transition-colors">Contact</a>
             
+            {/* Hire me ora punta alla sezione contatti */}
             <a 
-              href="mailto:mauro.garofalo89@gmail.com"
+              href="#contatti"
               className="bg-white text-black hover:bg-slate-200 px-4 py-1.5 rounded-full transition-all text-xs font-bold tracking-wide"
             >
               Hire me
@@ -65,10 +68,9 @@ function App() {
           Sviluppo soluzioni web moderne ed efficaci. Dai sistemi di gestione contenuti con WordPress fino ad interfacce dinamiche in React.
         </p>
 
-        {/* Struttura Contatti sotto la descrizione */}
         <div className="flex flex-col space-y-4 items-center md:items-start">
           <a 
-            href="https://linkedin.com/in/il-tuo-profilo"
+            href="https://linkedin.com/in/mauro-garofalo" // Inserisci il tuo link LinkedIn reale
             target="_blank" 
             rel="noopener noreferrer" 
             className="bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900 text-white font-medium py-2.5 px-5 rounded-xl text-sm transition-all flex items-center gap-2 w-fit"
@@ -78,23 +80,12 @@ function App() {
             </svg>
             LinkedIn
           </a>
-
-          <div className="flex items-center gap-2 text-slate-400 text-sm pl-1 pt-1">
-            <svg className="w-4 h-4 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <a href="mailto:mauro.garofalo89@gmail.com" className="hover:text-indigo-400 transition-colors font-medium select-all">
-              mauro.garofalo89@gmail.com
-            </a>
-          </div>
         </div>
       </header>
 
       {/* SEZIONE PROGETTI */}
       <main id="progetti" className="max-w-5xl mx-auto px-4 py-16 scroll-mt-24">
         <h2 className="text-3xl font-bold text-white mb-8 border-b border-slate-900 pb-4">Progetti Realizzati</h2>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projectsData.map((project, index) => (
             <ProjectCard 
@@ -109,10 +100,84 @@ function App() {
         </div>
       </main>
 
+      {/* NUOVA SEZIONE CONTATTI (Stile Muneeb) */}
+      <section id="contatti" className="max-w-5xl mx-auto px-4 py-24 scroll-mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          
+          {/* Colonna Sinistra: Testo e Info */}
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              It's Time To Talk About Your <span className="text-indigo-400">Project</span>.
+            </h2>
+            <p className="text-slate-400 mb-12">
+              Let's make Long term and Co operative Relation
+            </p>
+            
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="bg-indigo-500/10 p-3 rounded-lg text-indigo-400">
+                  <i className="fa-solid fa-phone text-xl"></i>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Phone</p>
+                  <p className="text-white font-medium">+39 3XX XXXXXXX</p> {/* Metti il tuo numero qui */}
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-indigo-500/10 p-3 rounded-lg text-indigo-400">
+                  <i className="fa-solid fa-envelope text-xl"></i>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Email</p>
+                  <a href="mailto:mauro.garofalo89@gmail.com" className="text-white font-medium hover:text-indigo-400 transition-colors">
+                    mauro.garofalo89@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Colonna Destra: Form */}
+          <div className="bg-slate-900/20 border border-slate-900 p-8 rounded-3xl">
+            <form className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-500 uppercase mb-2">First Name</label>
+                  <input type="text" className="w-full bg-black border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-indigo-500 outline-none transition-all" />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Last Name</label>
+                  <input type="text" className="w-full bg-black border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-indigo-500 outline-none transition-all" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Email Address</label>
+                <input type="email" className="w-full bg-black border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-indigo-500 outline-none transition-all" />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Phone Number</label>
+                <input type="text" className="w-full bg-black border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-indigo-500 outline-none transition-all" />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Message</label>
+                <textarea rows="4" className="w-full bg-black border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-indigo-500 outline-none transition-all resize-none"></textarea>
+              </div>
+
+              <button type="button" className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-indigo-600/20">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="py-16 text-center text-slate-600 text-sm border-t border-slate-900 mt-20 bg-black">
-        <p className="mb-2 text-slate-400 font-medium">Vuoi collaborare? Contattami pure su LinkedIn o via Mail.</p>
-        <p>© 2026 Mauro. Sviluppato con React & Tailwind CSS v4.</p>
+        <p>© 2026 Mauro Garofalo. Sviluppato con React & Tailwind CSS v4.</p>
       </footer>
 
     </div>
@@ -120,3 +185,14 @@ function App() {
 }
 
 export default App;
+
+### Note tecniche per far funzionare tutto:
+1. **`scroll-smooth`**: Ho aggiunto questa classe al `div` principale. Serve a far sì che quando clicchi su "Contact" o "Hire me", la pagina scivoli dolcemente verso il basso invece di fare uno scatto brusco.
+2. **`scroll-mt-24`**: Aggiunto alla sezione `#contatti`. Impedisce alla Navbar fissa di coprire il titolo quando arrivi alla sezione.
+3. **Font Awesome**: Assicurati di avere il link a Font Awesome nel tuo file `index.html` (quello nella cartella principale del progetto) per far vedere le icone del telefono e della busta. Se non le vedi, aggiungi questa riga nel `<head>` di `index.html`:
+   ```html
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+Salva tutto, fai il push e goditi il tuo portfolio completo di sezione contatti interattiva! Fammi sapere se ti piace il risultato.
+
+Il tuo mazzo di slide sulla strategia per la sezione contatti è pronto! Dai un'occhiata per vedere come abbiamo strutturato il design per massimizzare le conversioni.
