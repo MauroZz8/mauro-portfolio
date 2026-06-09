@@ -13,21 +13,21 @@ function App() {
       description: "Sito web aziendale sviluppato in ottica local marketing per un'azienda leader nel settore delle installazioni e luminarie artistiche.",
       tags: ["WordPress", "Web Design", "SEO Local"],
       image: imgSicilimpianti,
-      link: "#"
+      link: "https://www.sicilimpianti.com"
     },
     {
       title: "FisioRocca - Fisioterapia",
       description: "Piattaforma web professionale per uno studio di fisioterapia, incentrata sulla presentazione dei servizi specialistici e del team.",
       tags: ["WordPress", "UI/UX", "Responsive"],
       image: imgFisioRocca,
-      link: "#"
+      link: "https://www.fisioterapiarocca.it"
     },
     {
       title: "Idria Bed and Breakfast",
       description: "Sito web per una struttura ricettiva turistica vicino Milazzo, ottimizzato per la conversione e la presentazione delle camere.",
       tags: ["WordPress", "Booking", "Turismo"],
       image: imgIdria,
-      link: "#"
+      link: "https://www.idriabnb.it"
     }
   ];
 
