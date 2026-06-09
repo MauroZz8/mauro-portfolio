@@ -1,27 +1,26 @@
 import React from 'react';
 import ProjectCard from './components/ProjectCard.jsx';
 
-// Importiamo le immagini reali dalla cartella assets
+// Importiamo le immagini con i nomi esatti che hai dato ai file
 import imgSicilimpianti from './assets/sicilimpianti.jpg';
 import imgFisioRocca from './assets/fisioterapiarocca.jpg';
 import imgIdria from './assets/idriabnb.jpg';
 
 function App() {
-  // Array aggiornato con i tuoi veri progetti WordPress
   const projectsData = [
     {
       title: "Luminarie Sicil Impianti",
       description: "Sito web aziendale sviluppato in ottica local marketing per un'azienda leader nel settore delle installazioni e luminarie artistiche.",
       tags: ["WordPress", "Web Design", "SEO Local"],
       image: imgSicilimpianti,
-      link: "https://sicilimpianti.it" // Se hai il link reale del sito inseriscilo qui, es: "https://sicilimpianti.it"
+      link: "#"
     },
     {
       title: "FisioRocca - Fisioterapia",
       description: "Piattaforma web professionale per uno studio di fisioterapia, incentrata sulla presentazione dei servizi specialistici e del team.",
       tags: ["WordPress", "UI/UX", "Responsive"],
       image: imgFisioRocca,
-      link: "www.fisioterapiarocca.it"
+      link: "#"
     },
     {
       title: "Idria Bed and Breakfast",
@@ -96,7 +95,6 @@ function App() {
       <main id="progetti" className="max-w-5xl mx-auto px-4 py-16 scroll-mt-24">
         <h2 className="text-3xl font-bold text-white mb-8 border-b border-slate-900 pb-4">Progetti Realizzati</h2>
         
-        {/* Griglia che passa a 3 colonne sui desktop per far spazio a tutti e tre i siti */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projectsData.map((project, index) => (
             <ProjectCard 
@@ -105,7 +103,7 @@ function App() {
               description={project.description}
               tags={project.tags}
               link={project.link}
-              image={project.image} // Passiamo la nuova proprietà immagine
+              image={project.image}
             />
           ))}
         </div>
